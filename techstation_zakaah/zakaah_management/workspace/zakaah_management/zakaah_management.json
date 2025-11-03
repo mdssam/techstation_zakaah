@@ -1,0 +1,47 @@
+{
+ "doctype": "Workspace",
+ "name": "Zakaah Management",
+ "label": "Zakaah Management",
+ "title": "Zakaah Management",
+ "module": "Zakaah Management",
+ "public": 1,
+ "sequence_id": 100.0,
+ "content": "[{\"id\":\"header1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Zakaah Management</b></span>\",\"col\":12}},{\"id\":\"shortcut1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gold Price\",\"col\":2}},{\"id\":\"shortcut2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assets Configuration\",\"col\":2}},{\"id\":\"shortcut3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Calculation Runs\",\"col\":2}},{\"id\":\"shortcut4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Zakaah Payments\",\"col\":2}},{\"id\":\"shortcut5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Allocation History\",\"col\":2}}]",
+ "shortcuts": [
+  {
+   "type": "DocType",
+   "label": "Gold Price",
+   "name": "Gold Price",
+   "link_to": "Gold Price",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "label": "Assets Configuration",
+   "name": "Zakaah Assets Configuration",
+   "link_to": "Zakaah Assets Configuration",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "label": "Calculation Runs",
+   "name": "Zakaah Calculation Run",
+   "link_to": "Zakaah Calculation Run",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "label": "Zakaah Payments",
+   "name": "Zakaah Payments",
+   "link_to": "Zakaah Payments",
+   "doc_view": "List"
+  },
+  {
+   "type": "DocType",
+   "label": "Allocation History",
+   "name": "Zakaah Allocation History",
+   "link_to": "Zakaah Allocation History",
+   "doc_view": "List"
+  }
+ ]
+}

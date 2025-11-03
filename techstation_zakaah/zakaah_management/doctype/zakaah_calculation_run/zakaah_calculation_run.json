@@ -1,0 +1,289 @@
+{
+ "allow_rename": 1,
+ "allow_import": 1,
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "calendar_type",
+  "fiscal_year",
+  "from_date",
+  "to_date",
+  "section_gold",
+  "gold_price_date",
+  "gold_price_per_gram_24k",
+  "owners_count",
+  "nisab_value",
+  "assets_in_gold_grams",
+  "nisab_met",
+  "section_assets",
+  "cash_balance",
+  "inventory_balance",
+  "receivables",
+  "liabilities",
+  "reserves",
+  "total_assets",
+  "section_zakaah",
+  "zakaah_rate",
+  "total_zakaah",
+  "paid_zakaah",
+  "outstanding_zakaah",
+  "status",
+ "section_items",
+ "items",
+ "section_payment_accounts",
+ "payment_accounts",
+ "section_journal_entries",
+ "journal_entries"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "calendar_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Calendar Type",
+   "options": "Gregorian\nHijri",
+   "reqd": 1,
+   "default": "Gregorian"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "section_gold",
+   "fieldtype": "Section Break",
+   "label": "Gold Price Information"
+  },
+  {
+   "fieldname": "gold_price_date",
+   "fieldtype": "Date",
+   "label": "Gold Price Date"
+  },
+  {
+   "fieldname": "gold_price_per_gram_24k",
+   "fieldtype": "Currency",
+   "label": "Price per Gram (24K)",
+   "precision": 2
+  },
+  {
+   "fieldname": "owners_count",
+   "fieldtype": "Int",
+   "label": "Number of Owners",
+   "default": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "nisab_value",
+   "fieldtype": "Currency",
+   "label": "Nisab Value",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "assets_in_gold_grams",
+   "fieldtype": "Float",
+   "label": "Assets in Gold Grams",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "nisab_met",
+   "fieldtype": "Check",
+   "label": "Meets Nisab Requirement",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_assets",
+   "fieldtype": "Section Break",
+   "label": "Assets Breakdown"
+  },
+  {
+   "fieldname": "cash_balance",
+   "fieldtype": "Currency",
+   "label": "Cash Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inventory_balance",
+   "fieldtype": "Currency",
+   "label": "Inventory Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "receivables",
+   "fieldtype": "Currency",
+   "label": "Receivables",
+   "read_only": 1
+  },
+  {
+   "fieldname": "liabilities",
+   "fieldtype": "Currency",
+   "label": "Liabilities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reserves",
+   "fieldtype": "Currency",
+   "label": "Reserves",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_assets",
+   "fieldtype": "Currency",
+   "label": "Total Assets",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "section_zakaah",
+   "fieldtype": "Section Break",
+   "label": "Zakaah Calculation"
+  },
+  {
+   "fieldname": "zakaah_rate",
+   "fieldtype": "Percent",
+   "label": "Zakaah Rate (%)",
+   "default": 2.5
+  },
+  {
+   "fieldname": "total_zakaah",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Zakaah",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "paid_zakaah",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "default": 0,
+   "label": "Paid Zakaah",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outstanding_zakaah",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Outstanding Zakaah",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nCalculated\nPartially Paid\nPaid\nNot Due",
+   "default": "Draft",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_items",
+   "fieldtype": "Section Break",
+   "label": "Detailed Breakdown"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Zakaah Calculation Run Item",
+   "cannot_add_rows": 1,
+   "cannot_delete_rows": 1
+  },
+  {
+   "fieldname": "section_payment_accounts",
+   "fieldtype": "Section Break",
+   "label": "Zakaah Payment Accounts"
+  },
+  {
+   "fieldname": "payment_accounts",
+   "fieldtype": "Table",
+   "label": "Payment Accounts",
+   "options": "Zakaah Account Configuration",
+   "cannot_add_rows": 1,
+   "cannot_delete_rows": 1
+  },
+  {
+   "fieldname": "section_journal_entries",
+   "fieldtype": "Section Break",
+   "label": "Journal Entries"
+  },
+  {
+   "fieldname": "journal_entries",
+   "fieldtype": "Table",
+   "label": "Journal Entries",
+   "options": "Zakaah Calculation Journal Entry Item"
+  }
+ ],
+ "is_submittable": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "zakaah_management",
+ "name": "Zakaah Calculation Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Zakaah Manager",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Zakaah Accountant",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "allow_rename": 1
+}
+
+

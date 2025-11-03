@@ -1,0 +1,153 @@
+{
+ "allow_rename": 1,
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "fiscal_year",
+  "section_cash",
+  "cash_accounts",
+  "section_inventory",
+  "inventory_accounts",
+  "section_receivables",
+  "receivable_accounts",
+  "section_liabilities",
+  "liabilities_accounts",
+  "section_reserves",
+  "reserve_accounts",
+  "section_payment_accounts",
+  "payment_accounts"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_cash",
+   "fieldtype": "Section Break",
+   "label": "Cash Accounts"
+  },
+  {
+   "fieldname": "cash_accounts",
+   "fieldtype": "Table",
+   "label": "Cash Accounts",
+   "options": "Zakaah Account Configuration"
+  },
+  {
+   "fieldname": "section_inventory",
+   "fieldtype": "Section Break",
+   "label": "Inventory Accounts"
+  },
+  {
+   "fieldname": "inventory_accounts",
+   "fieldtype": "Table",
+   "label": "Inventory Accounts",
+   "options": "Zakaah Account Configuration"
+  },
+  {
+   "fieldname": "section_receivables",
+   "fieldtype": "Section Break",
+   "label": "Receivable Accounts"
+  },
+  {
+   "fieldname": "receivable_accounts",
+   "fieldtype": "Table",
+   "label": "Receivable Accounts",
+   "options": "Zakaah Account Configuration"
+  },
+  {
+   "fieldname": "section_liabilities",
+   "fieldtype": "Section Break",
+   "label": "Liabilities Accounts"
+  },
+  {
+   "fieldname": "liabilities_accounts",
+   "fieldtype": "Table",
+   "label": "Liabilities Accounts",
+   "options": "Zakaah Account Configuration"
+  },
+  {
+   "fieldname": "section_reserves",
+   "fieldtype": "Section Break",
+   "label": "Reserve Accounts"
+  },
+  {
+   "fieldname": "reserve_accounts",
+   "fieldtype": "Table",
+   "label": "Reserve Accounts",
+   "options": "Zakaah Account Configuration"
+  },
+  {
+   "fieldname": "section_payment_accounts",
+   "fieldtype": "Section Break",
+   "label": "Zakaah Payment Accounts",
+   "description": "Accounts used in Journal Entries when paying Zakaah"
+  },
+  {
+   "fieldname": "payment_accounts",
+   "fieldtype": "Table",
+   "label": "Payment Accounts",
+   "options": "Zakaah Account Configuration",
+   "description": "Add accounts that will be used in Journal Entries to pay Zakaah"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "zakaah_management",
+ "name": "Zakaah Assets Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Zakaah Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "hash",
+ "allow_rename": 1,
+ "indexes": [
+  {
+   "unique": 1,
+   "fields": [
+    "company",
+    "fiscal_year"
+   ]
+  }
+ ]
+}
+
+

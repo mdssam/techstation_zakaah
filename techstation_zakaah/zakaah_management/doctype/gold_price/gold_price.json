@@ -1,0 +1,93 @@
+{
+ "allow_rename": 1,
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "autoname": "hash",
+ "hide_name_in_print": 1,
+ "field_order": [
+  "price_date",
+  "currency",
+  "price_per_gram_24k",
+  "source",
+  "api_response"
+ ],
+ "fields": [
+  {
+   "fieldname": "price_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Price Date",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "EGP",
+   "default": "EGP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_per_gram_24k",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price per Gram (24K)",
+   "reqd": 1,
+   "precision": 2
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "Source",
+   "default": "API",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "api_response",
+   "fieldtype": "Text",
+   "label": "API Response",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "zakaah_management",
+ "name": "Gold Price",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Zakaah Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "name_case": "",
+ "title_field": "price_date"
+}
+
+

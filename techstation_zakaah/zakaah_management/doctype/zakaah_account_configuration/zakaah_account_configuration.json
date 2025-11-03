@@ -1,0 +1,100 @@
+{
+ "allow_rename": 1,
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+  "field_order": [
+  "account",
+  "account_name",
+  "balance",
+  "debit",
+  "calculation_method",
+  "debt_type",
+  "include_deposits",
+  "deduct_from_assets",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "fetch_from": "account.account_name",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "read_only": 1,
+   "precision": 2,
+   "depends_on": "eval:doc.parentfield != 'payment_accounts'",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "debit",
+   "fieldtype": "Currency",
+   "label": "Debit",
+   "read_only": 1,
+   "precision": 2,
+   "depends_on": "eval:doc.parentfield == 'payment_accounts'",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "calculation_method",
+   "fieldtype": "Select",
+   "label": "Calculation Method",
+   "options": "\nAccount Balance\nStock Ledger",
+   "depends_on": "eval:doc.parentfield == 'inventory_accounts'"
+  },
+  {
+   "fieldname": "debt_type",
+   "fieldtype": "Select",
+   "label": "Debt Type",
+   "options": "\nAll\nGood\nDoubtful\nBad",
+   "depends_on": "eval:doc.parentfield == 'receivable_accounts'"
+  },
+  {
+   "fieldname": "include_deposits",
+   "fieldtype": "Check",
+   "label": "Include Bank Deposits",
+   "depends_on": "eval:doc.parentfield == 'cash_accounts'"
+  },
+  {
+   "fieldname": "deduct_from_assets",
+   "fieldtype": "Check",
+   "default": 1,
+   "label": "Deduct from Assets",
+   "depends_on": "eval:doc.parentfield == 'liabilities_accounts'"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "zakaah_management",
+ "name": "Zakaah Account Configuration",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+
+

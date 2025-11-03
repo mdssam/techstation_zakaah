@@ -1,0 +1,160 @@
+{
+ "allow_rename": 1,
+ "allow_import": 1,
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "from_date",
+  "to_date",
+  "column_break_dates",
+  "total_calculation_runs",
+  "total_journal_entries",
+  "section_status",
+  "reconciliation_status",
+  "total_unreconciled",
+  "total_reconciled",
+  "section_calculation_runs",
+  "calculation_runs",
+  "section_payment_entries",
+  "payment_entries",
+  "section_allocation_history",
+  "allocation_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dates",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_calculation_runs",
+   "fieldtype": "Currency",
+   "label": "Total Calculation Runs (Outstanding)",
+   "read_only": 1,
+   "precision": 2
+  },
+  {
+   "fieldname": "total_journal_entries",
+   "fieldtype": "Currency",
+   "label": "Total Journal Entries (Unreconciled)",
+   "read_only": 1,
+   "precision": 2
+  },
+  {
+   "fieldname": "section_status",
+   "fieldtype": "Section Break",
+   "label": "Reconciliation Status"
+  },
+  {
+   "fieldname": "reconciliation_status",
+   "fieldtype": "Select",
+   "label": "Reconciliation Status",
+   "options": "Open\nPartial\nReconciled",
+   "default": "Open",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_unreconciled",
+   "fieldtype": "Currency",
+   "label": "Total Unreconciled Amount",
+   "read_only": 1,
+   "precision": 2
+  },
+  {
+   "fieldname": "total_reconciled",
+   "fieldtype": "Currency",
+   "label": "Total Reconciled Amount",
+   "read_only": 1,
+   "precision": 2
+  },
+  {
+   "fieldname": "section_calculation_runs",
+   "fieldtype": "Section Break",
+   "label": "Zakaah Calculation Runs (Unreconciled Only)"
+  },
+  {
+   "fieldname": "calculation_runs",
+   "fieldtype": "Table",
+   "label": "Calculation Runs",
+   "options": "Zakaah Payment Calculation Run Item"
+  },
+  {
+   "fieldname": "section_payment_entries",
+   "fieldtype": "Section Break",
+   "label": "Journal Entries (Unreconciled Only)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "payment_entries",
+   "fieldtype": "Table",
+   "label": "Journal Entries",
+   "options": "Zakaah Payment Entry Item"
+  },
+  {
+   "fieldname": "section_allocation_history",
+   "fieldtype": "Section Break",
+   "label": "Allocation History",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "allocation_history",
+   "fieldtype": "Table",
+   "label": "Allocation History",
+   "options": "Zakaah Payment Allocation History Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "zakaah_management",
+ "name": "Zakaah Payments",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Zakaah Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+
